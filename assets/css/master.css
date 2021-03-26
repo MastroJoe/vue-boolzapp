@@ -2,10 +2,133 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'New Tegomin', serif;
 }
 
-#root {
-  height: 100vh;
-  width: 100vw;
+ /* Background con i 2 colori */
+.background-top {
+  background-color: #009688;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 150px;
+  width: 100%;
+}
+
+.background-bottom {
+  background-color: #D9DBD4;
+  position: fixed;
+  top: 150px;
+  left: 0;
+  z-index: -1;
+  height: calc(100% - 150px);
+  width: 100%;
+}
+
+/* webapp */
+.container {
+  margin: 0 auto;
+  width: 80%;
+}
+
+/* top */
+header {
+  width: calc(80% - 400px);
+  position: fixed;
+  top: 25px;
+  z-index: 1;
+  margin-left: 400px;
+}
+
+.nav-right {
+  background-color: #EDEDED;
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+
+/* main e nav sx */
+main {
+  height: 100%;
+  display: flex;
+}
+
+aside {
+  width: 400px;
+  height: 100%;
+}
+
+.nav-left {
+  background-color: #EDEDED;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  border-right: 0.5px solid #000000;
+  margin-top: 25px;
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  height: 50px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.icons i {
+  margin-right: 10px;
+}
+
+.notifications {
+  height: 90px;
+  background-color: #9DE1FE;
+  display: flex;
+  align-items: center;
+}
+
+.bell i {
+  margin: 0 10px;
+  padding: 15px 15px;
+  border-radius: 100%;
+  background-color: #ffffff;
+  color: #9DE1FE;
+  font-size: 20px;
+}
+
+.bell-text {
+  margin-left: 10px;
+}
+
+.notification-text p {
+  font-size: 15px;
+}
+
+.notification-text a {
+  font-size: 15px;
+  color: #848484;
+}
+
+.search-contact {
+  height: 50px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-contact input {
+  width: 360px;
+  padding: 5px;
+  border-radius: 10px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.search-contact i {
+  position: relative;
+  left: 20px;
 }
