@@ -8,49 +8,4 @@
 #root {
   height: 100vh;
   width: 100vw;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
 }
-/*
-.container {
-  min-width: 400px;
-  max-width: 800px;
-  padding: 20px;
-  background-color: red;
-  border: 1px solid #000000;
-  border-radius: 9px;
-  box-shadow: 5px 5px 3px #888888;
-}
-
-h1 {
-  text-align: center;
-}
-
-.todos {
-  list-style: none;
-}
-
-.todos li {
-  padding: 10px 40px;
-}
-
-.todos li .control {
-  float: right;
-  padding: 0 8px;
-}
-
-.todos li:after {
-  content:'';
-  display: table;
-  clear: both;
-}
-
-.container input {
-  width: 100%;
-  border-radius: 5px;
-}
-
-.title.completato {
-  text-decoration: line-through;
-} */
