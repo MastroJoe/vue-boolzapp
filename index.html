@@ -86,26 +86,16 @@
       </aside>
       <!-- chat -->
       <div class="chat">
-        <div class="container-sent">
-          <div class="back-box sent-box">
-            {{ contacts[0].messages[0].text }}
-          <p class="date">{{ contacts[0].messages[0].date }}</p>
-          </div>
-        </div>
-        <div class="container-sent">
-          <div class="back-box sent-box">
-            {{contacts[0].messages[1].text}}
-          <p class="date">{{ contacts[0].messages[1].date }}</p>
-          </div>
-        </div>
-        <div class="container-received">
-          <div class="back-box received-box">
-            {{contacts[0].messages[2].text}}
-            <p class="date">{{ contacts[0].messages[2].date }}</p>
+        <div class="container-message">
+        <div class="messages" v-for="message in contacts[index].messages">
+          <div class="message"
+               :class="message.status">
+            <p class="message-text">{{ message.text }}</p>
+            <small class="date">{{ getTime(message.date) }}</small>
           </div>
         </div>
       </div>
-      <!-- sezione messaggio ed emoji -->
+      <!-- sezione input messaggio ed emoji -->
       <div class="input-chat">
         <i class="fas fa-smile"></i>
         <input type="text" placeholder=" Scrivi un messaggio">
