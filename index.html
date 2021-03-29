@@ -25,6 +25,10 @@
       <div class="nav-right">
         <div class="user-section">
           <img class="avatar"src="./assets/img/avatar_1.jpg" alt="contact avatar">
+          <div class="info">
+            <h3>{{ contacts[0].name }}</h3>
+            <p>Ultimo accesso alle 16:15</p>
+          </div>
         </div>
         <!-- icone -->
         <div class="icons">
@@ -84,24 +88,27 @@
       <div class="chat">
         <div class="container-sent">
           <div class="back-box sent-box">
-            {{contacts[0].messages[0].text}}
+            {{ contacts[0].messages[0].text }}
+          <p class="date">{{ contacts[0].messages[0].date }}</p>
           </div>
         </div>
         <div class="container-sent">
           <div class="back-box sent-box">
             {{contacts[0].messages[1].text}}
+          <p class="date">{{ contacts[0].messages[1].date }}</p>
           </div>
         </div>
         <div class="container-received">
           <div class="back-box received-box">
             {{contacts[0].messages[2].text}}
+            <p class="date">{{ contacts[0].messages[2].date }}</p>
           </div>
         </div>
       </div>
       <!-- sezione messaggio ed emoji -->
       <div class="input-chat">
         <i class="fas fa-smile"></i>
-        <input type="text" name="" value="" placeholder=" Scrivi un messaggio">
+        <input type="text" placeholder=" Scrivi un messaggio">
         <i class="fas fa-microphone"></i>
       </div>
     </main>

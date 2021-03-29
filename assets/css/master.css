@@ -129,7 +129,8 @@ aside {
 .search input {
   width: 360px;
   padding: 5px;
-  border-radius: 10px;
+  border-radius: 15px;
+  border-color: #808080;
   margin-right: 10px;
   text-align: center;
 }
@@ -137,6 +138,7 @@ aside {
 .search i {
   position: relative;
   left: 25px;
+  color: #808080;
 }
 
 /* lista contatti a sx */
@@ -210,6 +212,13 @@ aside {
   margin-left: 50px;
 }
 
+.back-box .date {
+  font-size: 10px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 5px;
+}
+
 /* input-chat */
 
 .input-chat {
@@ -230,7 +239,7 @@ aside {
   width: 760px;
   padding: 10px;
   border: none;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .input-chat i {

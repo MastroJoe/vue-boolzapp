@@ -5,6 +5,7 @@ var app = new Vue(
   {
     el: '#root',
     data: {
+      index: 0,
       contacts: [
       	{
       		name: 'Michele',
@@ -186,8 +187,8 @@ var app = new Vue(
       // funzione per ottenere l'ora e i minuti dei messaggi
       getTime: function(date) {
         let dateTime = new Date(date);
-        let hours = datetime.getHours();
-        let minutes = datetime.getMinutes();
+        let hours = dateTime.getHours();
+        let minutes = dateTime.getMinutes();
         return `${hours}:${minutes}`;
       }
     }
