@@ -23,6 +23,15 @@
     <!-- Navbar top -->
     <header>
       <div class="nav-right">
+        <div class="user-section">
+          <img class="avatar"src="./assets/img/avatar_1.jpg" alt="contact avatar">
+        </div>
+        <!-- icone -->
+        <div class="icons">
+          <i class="fas fa-search"></i>
+          <i class="fas fa-paperclip"></i>
+          <i class="fas fa-ellipsis-v"></i>
+        </div>
       </div>
     </header>
     <!-- navbar a sx -->
@@ -31,7 +40,7 @@
       <aside>
         <div class="nav-left">
           <div class="user-section">
-            <img class="avatar"src="./assets/img/avatar_io.jpg" alt="user_avatar">
+            <img class="avatar"src="./assets/img/avatar_io.jpg" alt="user avatar">
           </div>
           <!-- icone -->
           <div class="icons">
@@ -60,8 +69,8 @@
           <ul class="contact-list">
             <!-- ciclo v-for utenti -->
             <li v-for="contact in contacts">
-            <!-- avatar -->
-            <img :src="'./assets/img/avatar' + contact.avatar + '.jpg'" alt="">
+            <!-- avatar con v-bind -->
+            <img :src="'./assets/img/avatar' + contact.avatar + '.jpg'" alt="contact avatar">
               <!-- info del contatto -->
               <div class="info">
                 <h3>{{ contact.name }}</h3>
@@ -74,11 +83,13 @@
       <!-- chat -->
       <div class="chat">
       </div>
+      <!-- sezione messaggio ed emoji -->
+      <div class="input-chat">
+        <i class="fas fa-smile"></i>
+        <input type="text" name="" value="" placeholder=" Scrivi un messaggio">
+        <i class="fas fa-microphone"></i>
+      </div>
     </main>
-    <!-- sezione messaggio ed emoji -->
-    <section>
-
-    </section>
   </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
