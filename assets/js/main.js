@@ -183,7 +183,13 @@ var app = new Vue(
 
     },
     methods: {
-
+      // funzione per ottenere l'ora e i minuti dei messaggi
+      getTime: function(date) {
+        let dateTime = new Date(date);
+        let hours = datetime.getHours();
+        let minutes = datetime.getMinutes();
+        return `${hours}:${minutes}`;
+      }
     }
   }
 );
