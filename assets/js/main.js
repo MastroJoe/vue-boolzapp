@@ -31,46 +31,46 @@ var app = new Vue(
       			}
       		],
       	},
-      	{
+        {
       		name: 'Fabio',
       		avatar: '_2',
       		visible: true,
       		messages: [
       			{
-      				date: '20/03/2020 16:30:00',
-      				text: 'Ciao come stai?',
+      				date: '10/01/2020 15:30:55',
+      				text: 'Hai portato a spasso il cane?',
       				status: 'sent'
       			},
       			{
-      				date: '20/03/2020 16:30:55',
-      				text: 'Bene grazie! Stasera ci vediamo?',
+      				date: '10/01/2020 15:50:00',
+      				text: 'Ricordati di dargli da mangiare',
+      				status: 'sent'
+      			},
+      			{
+      				date: '10/01/2020 15:55:22',
+      				text: 'Fatto!',
       				status: 'received'
-      			},
-      			{
-      				date: '20/03/2020 16:35:00',
-      				text: 'Mi piacerebbe ma devo andare a fare la spesa.',
-      				status: 'sent'
       			}
       		],
       	},
-      	{
+        {
       		name: 'Samuele',
       		avatar: '_3',
       		visible: true,
       		messages: [
       			{
-      				date: '28/03/2020 10:10:40',
-      				text: 'La Marianna va in campagna',
-      				status: 'received'
-      			},
-      			{
-      				date: '28/03/2020 10:20:10',
-      				text: 'Sicuro di non aver sbagliato chat?',
+      				date: '10/01/2020 15:30:55',
+      				text: 'Hai portato a spasso il cane?',
       				status: 'sent'
       			},
       			{
-      				date: '28/03/2020 16:15:22',
-      				text: 'Ah scusa!',
+      				date: '10/01/2020 15:50:00',
+      				text: 'Ricordati di dargli da mangiare',
+      				status: 'sent'
+      			},
+      			{
+      				date: '10/01/2020 18:11:22',
+      				text: 'Tutto fatto!',
       				status: 'received'
       			}
       		],
@@ -86,98 +86,98 @@ var app = new Vue(
       				status: 'sent'
       			},
       			{
-      				date: '10/01/2020 15:50:00',
+      				date: '10/01/2020 17:23:00',
       				text: 'Si, ma preferirei andare al cinema',
       				status: 'received'
       			}
       		],
       	},
         {
-          name: 'Marco',
-          avatar: '_8',
-          visible: true,
-          messages: [
-            {
-              date: '10/01/2020 15:30:55',
-              text: 'Hai portato a spasso il cane?',
-              status: 'sent'
-            },
-            {
-              date: '10/01/2020 15:50:00',
-              text: 'Ricordati di dargli da mangiare',
-              status: 'sent'
-            },
-            {
-              date: '10/01/2020 16:15:22',
-              text: 'Tutto fatto!',
-              status: 'received'
-            }
-          ],
-        },
+      		name: 'Marco',
+      		avatar: '_7',
+      		visible: true,
+      		messages: [
+      			{
+      				date: '10/01/2020 20:30:55',
+      				text: 'Hai portato a spasso il cane?',
+      				status: 'sent'
+      			},
+      			{
+      				date: '10/01/2020 20:50:00',
+      				text: 'Ricordati di dargli da mangiare',
+      				status: 'sent'
+      			},
+      			{
+      				date: '10/01/2020 21:15:22',
+      				text: 'Tutto fatto!',
+      				status: 'received'
+      			}
+      		],
+      	},
         {
-          name: 'Fabio',
-          avatar: '_7',
-          visible: true,
-          messages: [
-            {
-              date: '20/03/2020 16:30:00',
-              text: 'Ciao come stai?',
-              status: 'sent'
-            },
-            {
-              date: '20/03/2020 16:30:55',
-              text: 'Bene grazie! Stasera ci vediamo?',
-              status: 'received'
-            },
-            {
-              date: '20/03/2020 16:35:00',
-              text: 'Mi piacerebbe ma devo andare a fare la spesa.',
-              status: 'sent'
-            }
-          ],
-        },
+      		name: 'Fabio',
+      		avatar: '_8',
+      		visible: true,
+      		messages: [
+      			{
+      				date: '10/01/2020 15:30:55',
+      				text: 'Hai portato a spasso il cane?',
+      				status: 'sent'
+      			},
+      			{
+      				date: '10/01/2020 15:50:00',
+      				text: 'Ricordati di dargli da mangiare',
+      				status: 'sent'
+      			},
+      			{
+      				date: '10/01/2020 16:15:22',
+      				text: 'Tutto fatto!',
+      				status: 'received'
+      			}
+      		],
+      	},
         {
-          name: 'Alessandro',
-          avatar: '_5',
-          visible: true,
-          messages: [
-            {
-              date: '20/03/2020 16:30:00',
-              text: 'Ciao come stai?',
-              status: 'sent'
-            },
-            {
-              date: '20/03/2020 16:30:55',
-              text: 'Bene grazie! Stasera ci vediamo?',
-              status: 'received'
-            },
-            {
-              date: '20/03/2020 16:35:00',
-              text: 'Mi piacerebbe ma devo andare a fare la spesa.',
-              status: 'sent'
-            }
-          ],
-        },
+      		name: 'Alessandro',
+      		avatar: '_5',
+      		visible: true,
+      		messages: [
+      			{
+      				date: '10/01/2020 15:30:55',
+      				text: 'Hai portato a spasso il cane?',
+      				status: 'sent'
+      			},
+      			{
+      				date: '10/01/2020 15:50:00',
+      				text: 'Ricordati di dargli da mangiare',
+      				status: 'sent'
+      			},
+      			{
+      				date: '10/01/2020 16:15:22',
+      				text: 'Tutto fatto!',
+      				status: 'received'
+      			}
+      		],
+      	},
         {
           name: 'Giorgio',
           avatar: '_4',
           visible: true,
           messages: [
-            {
-              date: '20/03/2020 16:30:00',
-              text: 'Ciao come stai?',
-              status: 'sent'
-            },
-            {
-              date: '20/03/2020 16:30:55',
-              text: 'Bene grazie! Stasera ci vediamo?',
-              status: 'received'
-            },
-            {
-              date: '20/03/2020 16:35:00',
-              text: 'Mi piacerebbe ma devo andare a fare la spesa.',
-              status: 'sent'
-            }
+      			{
+      				date: '10/01/2020 11:30:55',
+      				text: 'Hai portato a spasso il cane?',
+      				status: 'sent'
+      			},
+      			{
+      				date: '10/01/2020 11:50:00',
+      				text: 'Ricordati di dargli da mangiare',
+      				status: 'sent'
+      			},
+      			{
+      				date: '10/01/2020 21:15:22',
+      				text: 'Tutto fatto!',
+      				status: 'received'
+      			}
           ],
         }
       ]
@@ -207,15 +207,14 @@ var app = new Vue(
         const lastI = messages.length - 1;
         return messages[lastI].date;
       },
-      // funzione invio messaggio da input chat
-      send: function () {
-      let index;
-      this.contacts.forEach((contact, i) => {
-        if (contact.visible == true) {
-          index = i;
-        }
-      });
-      }
+      // // funzione invio messaggio da input chat
+      // send: function () {
+      // let index;
+      // this.contacts.forEach((contact, i) => {
+      //   if (contact.visible == true) {
+      //     index = i;
+      //   }
+      // });
     }
   }
 );
