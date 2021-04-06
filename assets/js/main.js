@@ -207,6 +207,13 @@ var app = new Vue(
         const lastI = messages.length - 1;
         return messages[lastI].date;
       },
+      // funzione invio messaggio da input chat
+      send: function () {
+      let index;
+      this.contacts.forEach((contact, i) => {
+        if (contact.visible == true) {
+          index = i;
+      }
     }
   }
 );
