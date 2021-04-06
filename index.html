@@ -88,25 +88,6 @@
             </li>
           </ul>
         </div>
-
-
-        <div class="container-contacts">
-          <div
-            v-if="contact.name.toLowerCase().includes(ricerca.toLowerCase())"
-            class="contact"
-            v-for="(contact, i) in contacts"
-            @click="addActive(contact, i)"
-            :class="(contact.visible == true) ? 'active' : '' ">
-            <img :src="'./assets/img/avatar' + contact.avatar + '.jpg'" alt="">
-            <div class="container-contact">
-              <div class="container-contact-name-time">
-                <h4 class="name">{{contact.name}}</h4>
-                <span>{{getTime(contact.messages[contact.messages.length - 1].date)}}</span>
-              </div>
-             <span>{{contact.messages[contact.messages.length - 1].text}}</span>
-            </div>
-          </div>
-        </div>
       </aside>
       <!-- chat -->
       <div class="chat">
