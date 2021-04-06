@@ -23,11 +23,13 @@
     <!-- Navbar top -->
     <header>
       <div class="nav-right">
-        <div class="user-section">
+        <div class="user-section"
+             v-for="(contact,i) in contacts"
+             v-if="contact.visible == true">
           <img class="avatar"src="./assets/img/avatar_1.jpg" alt="contact avatar">
           <div class="info">
-            <h3>{{ contacts[0].name }}</h3>
-            <p>Ultimo accesso alle 16:15</p>
+            <h3>{{ contacts[i].name }}</h3>
+            <p>Ultimo accesso: {{ lastAccess(i) }}</p>
           </div>
         </div>
         <!-- icone -->
@@ -66,32 +68,55 @@
         <!-- cerca contatti -->
         <div class="search">
           <i class="fas fa-search"></i>
-          <input type="text" placeholder="Cerca o inizia una nuova chat">
+          <input v-model="ricerca" type="text" placeholder="Cerca o inizia una nuova chat">
         </div>
         <!-- lista contatti con avatar -->
         <div class="contact">
           <ul class="contact-list">
-            <!-- ciclo v-for utenti -->
-            <li v-for="contact in contacts">
+            <!-- ciclo v-for utenti + click -->
+            <li v-if="contact.name.toLowerCase().includes(ricerca.toLowerCase())"
+                v-for="(contact, i) in contacts"
+                @click="addActive(contact, i)"
+                :class="(contact.visible == true) ? 'active' : '' ">
             <!-- avatar con v-bind -->
             <img :src="'./assets/img/avatar' + contact.avatar + '.jpg'" alt="contact avatar">
               <!-- info del contatto -->
               <div class="info">
                 <h3>{{ contact.name }}</h3>
-                <p>Ultimo messaggio</p>
+                <p>{{ getTime(contact.messages[contact.messages.length - 1].date) }}</p>
               </div>
             </li>
           </ul>
+        </div>
+
+
+        <div class="container-contacts">
+          <div
+            v-if="contact.name.toLowerCase().includes(ricerca.toLowerCase())"
+            class="contact"
+            v-for="(contact, i) in contacts"
+            @click="addActive(contact, i)"
+            :class="(contact.visible == true) ? 'active' : '' ">
+            <img :src="'./assets/img/avatar' + contact.avatar + '.jpg'" alt="">
+            <div class="container-contact">
+              <div class="container-contact-name-time">
+                <h4 class="name">{{contact.name}}</h4>
+                <span>{{getTime(contact.messages[contact.messages.length - 1].date)}}</span>
+              </div>
+             <span>{{contact.messages[contact.messages.length - 1].text}}</span>
+            </div>
+          </div>
         </div>
       </aside>
       <!-- chat -->
       <div class="chat">
         <div class="container-message">
-        <div class="messages" v-for="message in contacts[index].messages">
+        <div class="messages"
+             v-for="message in contacts[index].messages">
           <div class="message"
                :class="message.status">
             <p class="message-text">{{ message.text }}</p>
-            <small class="date">{{ getTime(message.date) }}</small>
+            <p class="date">{{ getTime(message.date) }}</p>
           </div>
         </div>
       </div>
@@ -104,6 +129,7 @@
     </main>
   </div>
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/dayjs.min.js" integrity="sha512-0fcCRl828lBlrSCa8QJY51mtNqTcHxabaXVLPgw/jPA5Nutujh6CbTdDgRzl9aSPYW/uuE7c4SffFUQFBAy6lg==" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script> -->
   <script src="assets/js/main.js"></script>
