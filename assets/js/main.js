@@ -6,6 +6,8 @@ var app = new Vue(
     el: '#root',
     data: {
       index: 0,
+      ricerca: '',
+      message: '',
       contacts: [
       	{
       		name: 'Michele',
@@ -190,7 +192,21 @@ var app = new Vue(
         let hours = dateTime.getHours();
         let minutes = dateTime.getMinutes();
         return `${hours}:${minutes}`;
-      }
+      },
+      // funzione contatto attivo
+      addActive: function (contact, i) {
+      this.contacts.forEach((contact, i) => {
+        contact.visible = false;
+      });
+      let index = this.contacts.indexOf(contact);
+      this.contacts[index].visible = true;
+      },
+      // funzione per ottenere ora ultimo accesso
+      lastAccess: function (index) {
+        const messages = this.contacts[index].messages;
+        const lastI = messages.length - 1;
+        return messages[lastI].date;
+      },
     }
   }
 );
