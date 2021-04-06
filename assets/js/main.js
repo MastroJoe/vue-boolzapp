@@ -213,6 +213,8 @@ var app = new Vue(
       this.contacts.forEach((contact, i) => {
         if (contact.visible == true) {
           index = i;
+        }
+      });
       }
     }
   }
