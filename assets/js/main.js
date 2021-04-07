@@ -6,7 +6,7 @@ var app = new Vue(
     el: '#root',
     data: {
       index: 0,
-      ricerca: '',
+      search: '',
       message: '',
       contacts: [
       	{
@@ -36,7 +36,7 @@ var app = new Vue(
       		avatar: '_2',
       		visible: false,
       		messages: [
-      			{
+            {
       				date: '10/01/2020 15:30:55',
       				text: 'Hai portato a spasso il cane?',
       				status: 'sent'
@@ -48,7 +48,7 @@ var app = new Vue(
       			},
       			{
       				date: '10/01/2020 15:55:22',
-      				text: 'Fatto!',
+      				text: 'Yep',
       				status: 'received'
       			}
       		],
@@ -58,18 +58,18 @@ var app = new Vue(
       		avatar: '_3',
       		visible: false,
       		messages: [
-      			{
-      				date: '10/01/2020 15:30:55',
+            {
+      				date: '10/01/2020 21:30:55',
       				text: 'Hai portato a spasso il cane?',
       				status: 'sent'
       			},
       			{
-      				date: '10/01/2020 15:50:00',
+      				date: '10/01/2020 21:35:00',
       				text: 'Ricordati di dargli da mangiare',
       				status: 'sent'
       			},
       			{
-      				date: '10/01/2020 18:11:22',
+      				date: '10/01/2020 22:15:22',
       				text: 'Tutto fatto!',
       				status: 'received'
       			}
@@ -80,13 +80,13 @@ var app = new Vue(
       		avatar: '_6',
       		visible: false,
       		messages: [
-      			{
+            {
       				date: '10/01/2020 15:30:55',
       				text: 'Lo sai che ha aperto una nuova pizzeria?',
       				status: 'sent'
       			},
       			{
-      				date: '10/01/2020 17:23:00',
+      				date: '10/01/2020 15:50:00',
       				text: 'Si, ma preferirei andare al cinema',
       				status: 'received'
       			}
@@ -99,17 +99,17 @@ var app = new Vue(
       		messages: [
       			{
       				date: '10/01/2020 20:30:55',
-      				text: 'Hai portato a spasso il cane?',
+      				text: 'Ciao Marco, come stai?',
       				status: 'sent'
       			},
       			{
       				date: '10/01/2020 20:50:00',
-      				text: 'Ricordati di dargli da mangiare',
+      				text: 'Ti va di andare a bere un caffè?',
       				status: 'sent'
       			},
       			{
       				date: '10/01/2020 21:15:22',
-      				text: 'Tutto fatto!',
+      				text: 'Ciao! Tutto bene grazie! Domani alle 8:00? :)',
       				status: 'received'
       			}
       		],
@@ -163,19 +163,19 @@ var app = new Vue(
           avatar: '_4',
           visible: false,
           messages: [
-      			{
-      				date: '10/01/2020 11:30:55',
-      				text: 'Hai portato a spasso il cane?',
+            {
+      				date: '10/01/2020 20:30:55',
+      				text: 'Ciao Marco, come stai?',
       				status: 'sent'
       			},
       			{
-      				date: '10/01/2020 11:50:00',
-      				text: 'Ricordati di dargli da mangiare',
+      				date: '10/01/2020 20:50:00',
+      				text: 'Ti va di andare a bere un caffè?',
       				status: 'sent'
       			},
       			{
       				date: '10/01/2020 21:15:22',
-      				text: 'Tutto fatto!',
+      				text: 'Ciao! Tutto bene grazie! Domani alle 8:00? :)',
       				status: 'received'
       			}
           ],
@@ -187,28 +187,28 @@ var app = new Vue(
     },
     methods: {
       // funzione per ottenere l'ora e i minuti dei messaggi
-      getTime: function(date) {
+      getTime: function(date){
         let dateTime = new Date(date);
         let hours = dateTime.getHours();
         let minutes = dateTime.getMinutes();
         return `${hours}:${minutes}`;
       },
       // funzione contatto attivo
-      addActive: function (contact, i) {
-      this.contacts.forEach((contact, i) => {
-        contact.visible = false;
-      });
-      let index = this.contacts.indexOf(contact);
-      this.contacts[index].visible = true;
+      addActive: function(contact, i){
+        this.contacts.forEach((contact, i) => {
+          contact.visible = false;
+        });
+        let index = this.contacts.indexOf(contact);
+        this.contacts[index].visible = true;
       },
       // funzione per ottenere ora ultimo accesso
-      lastAccess: function (index) {
-        const messages = this.contacts[index].messages;
-        const lastI = messages.length - 1;
-        return messages[lastI].date;
+      lastAccess: function(i){
+        const messages = this.contacts[i].messages;
+        const last = messages.length - 1;
+        return messages[last].date;
       },
       // // funzione invio messaggio da input chat
-      // msgSend: function () {
+      // msgSend: function(){
       // let index;
       // this.contacts.forEach((contact, i) => {
       //   if (contact.visible == true) {

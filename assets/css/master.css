@@ -162,7 +162,6 @@ aside {
   list-style: none;
   display: flex;
   align-items: center;
-  background-color: #ffffff;
 }
 
 .contact-list li img {
@@ -264,8 +263,8 @@ aside {
   background-color: #EDEDED;
   width: calc(80% - 400px);
   position: fixed;
-  margin-bottom: 20px;
-  margin-top: 440px;
+  margin-left: 400px;
+  margin-top: 715px;
   z-index: 10;
   display: flex;
   justify-content: space-around;

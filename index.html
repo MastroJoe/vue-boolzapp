@@ -69,13 +69,13 @@
         <!-- cerca contatti -->
         <div class="search">
           <i class="fas fa-search"></i>
-          <input v-model="ricerca" type="text" placeholder="Cerca o inizia una nuova chat">
+          <input v-model="search" type="text" placeholder="Cerca o inizia una nuova chat">
         </div>
         <!-- lista contatti con avatar -->
         <div class="contact">
           <ul class="contact-list">
             <!-- ciclo v-for utenti + click + addClass -->
-            <li v-if="contact.name.toLowerCase().includes(ricerca.toLowerCase())"
+            <li v-if="contact.name.toLowerCase().includes(search.toLowerCase())"
                 v-for="(contact, i) in contacts"
                 @click="addActive(contact, i)"
                 :class="(contact.visible == true) ? 'active' : '' ">
@@ -84,6 +84,8 @@
               <!-- info del contatto -->
               <div class="info">
                 <h3>{{ contact.name }}</h3>
+                <!-- mostro ultimo messaggio -->
+                <p>{{ contact.messages[contact.messages.length - 1].text }}</p>
                 <!-- mostro ultimo accesso -->
                 <p>{{ getTime(contact.messages[contact.messages.length - 1].date) }}</p>
               </div>
@@ -94,13 +96,16 @@
       <!-- chat -->
       <div class="chat">
         <div class="container-message">
-        <!-- con v-for mostro ogni messaggio del contatto -->
-        <div class="messages"
-             v-for="message in contacts[index].messages">
-          <div class="message"
-               :class="message.status">
-            <p class="message-text">{{ message.text }}</p>
-            <p class="date">{{ getTime(message.date) }}</p>
+             <!-- v-for="(contact,i) in contacts"
+             v-if="contact.visible == true"> -->
+          <!-- con v-for mostro ogni messaggio del contatto -->
+          <div class="messages"
+               v-for="message in contacts[index].messages">
+            <div class="message"
+                 :class="message.status">
+              <p class="message-text">{{ message.text }}</p>
+              <p class="date">{{ getTime(message.date) }}</p>
+            </div>
           </div>
         </div>
       </div>
