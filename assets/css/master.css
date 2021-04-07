@@ -79,12 +79,14 @@ aside {
   height: 50px;
   border-radius: 50%;
   margin-left: 10px;
+  cursor: pointer;
 }
 
 .icons i {
   margin-right: 10px;
   font-size: 30px;
   color: #808080;
+  cursor: pointer;
 }
 
 .notifications {
@@ -101,6 +103,7 @@ aside {
   background-color: #ffffff;
   color: #9DE1FE;
   font-size: 20px;
+  cursor: pointer;
 }
 
 .bell-text {
@@ -133,12 +136,14 @@ aside {
   border-color: #808080;
   margin-right: 10px;
   text-align: center;
+  cursor: pointer;
 }
 
 .search i {
   position: relative;
   left: 25px;
   color: #808080;
+  cursor: pointer;
 }
 
 /* lista contatti a sx */
@@ -146,6 +151,10 @@ aside {
 .contact {
   height: calc(100% - 150px);
   background-color: #ffffff;
+}
+
+.contact-list {
+  cursor: pointer;
 }
 
 .contact-list li {
@@ -162,7 +171,7 @@ aside {
   margin-left: 10px;
 }
 
-.contact-list li:first-child {
+.active {
   background-color: #EDEDED;
 }
 
@@ -231,14 +240,15 @@ aside {
   position: absolute;
   right: 60px;;
   bottom:0px;
-
+  cursor: pointer;
 }
 
 .received {
   background-color: #fff;
   position: absolute;
   left: 60px;
-  bottom:0px;
+  bottom: 0px;
+  cursor: pointer;
 }
 
 .date {
@@ -267,9 +277,11 @@ aside {
   padding: 10px;
   border: none;
   border-radius: 15px;
+  cursor: pointer;
 }
 
 .input-chat i {
   font-size: 30px;
   color: #808080;
+  cursor: pointer;
 }

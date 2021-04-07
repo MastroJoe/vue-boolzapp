@@ -15,17 +15,17 @@ var app = new Vue(
       		visible: true,
       		messages: [
       			{
-      				date: '10/01/2020 15:30:55',
+      				date: '12/01/2020 15:30:55',
       				text: 'Hai portato a spasso il cane?',
       				status: 'sent'
       			},
       			{
-      				date: '10/01/2020 15:50:00',
+      				date: '12/01/2020 15:50:00',
       				text: 'Ricordati di dargli da mangiare',
       				status: 'sent'
       			},
       			{
-      				date: '10/01/2020 16:15:22',
+      				date: '12/01/2020 16:15:22',
       				text: 'Tutto fatto!',
       				status: 'received'
       			}
@@ -34,7 +34,7 @@ var app = new Vue(
         {
       		name: 'Fabio',
       		avatar: '_2',
-      		visible: true,
+      		visible: false,
       		messages: [
       			{
       				date: '10/01/2020 15:30:55',
@@ -56,7 +56,7 @@ var app = new Vue(
         {
       		name: 'Samuele',
       		avatar: '_3',
-      		visible: true,
+      		visible: false,
       		messages: [
       			{
       				date: '10/01/2020 15:30:55',
@@ -78,7 +78,7 @@ var app = new Vue(
       	{
       		name: 'Luisa',
       		avatar: '_6',
-      		visible: true,
+      		visible: false,
       		messages: [
       			{
       				date: '10/01/2020 15:30:55',
@@ -95,7 +95,7 @@ var app = new Vue(
         {
       		name: 'Marco',
       		avatar: '_7',
-      		visible: true,
+      		visible: false,
       		messages: [
       			{
       				date: '10/01/2020 20:30:55',
@@ -117,7 +117,7 @@ var app = new Vue(
         {
       		name: 'Fabio',
       		avatar: '_8',
-      		visible: true,
+      		visible: false,
       		messages: [
       			{
       				date: '10/01/2020 15:30:55',
@@ -139,7 +139,7 @@ var app = new Vue(
         {
       		name: 'Alessandro',
       		avatar: '_5',
-      		visible: true,
+      		visible: false,
       		messages: [
       			{
       				date: '10/01/2020 15:30:55',
@@ -161,7 +161,7 @@ var app = new Vue(
         {
           name: 'Giorgio',
           avatar: '_4',
-          visible: true,
+          visible: false,
           messages: [
       			{
       				date: '10/01/2020 11:30:55',
@@ -208,7 +208,7 @@ var app = new Vue(
         return messages[lastI].date;
       },
       // // funzione invio messaggio da input chat
-      // send: function () {
+      // msgSend: function () {
       // let index;
       // this.contacts.forEach((contact, i) => {
       //   if (contact.visible == true) {

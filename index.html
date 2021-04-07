@@ -26,7 +26,8 @@
         <div class="user-section"
              v-for="(contact,i) in contacts"
              v-if="contact.visible == true">
-          <img class="avatar"src="./assets/img/avatar_1.jpg" alt="contact avatar">
+          <img class="avatar"
+               :src="'./assets/img/avatar' + contacts[i].avatar + '.jpg'" alt="avatar">
           <div class="info">
             <h3>{{ contacts[i].name }}</h3>
             <p>Ultimo accesso: {{ lastAccess(i) }}</p>
@@ -73,7 +74,7 @@
         <!-- lista contatti con avatar -->
         <div class="contact">
           <ul class="contact-list">
-            <!-- ciclo v-for utenti + click -->
+            <!-- ciclo v-for utenti + click + addClass -->
             <li v-if="contact.name.toLowerCase().includes(ricerca.toLowerCase())"
                 v-for="(contact, i) in contacts"
                 @click="addActive(contact, i)"
@@ -83,6 +84,7 @@
               <!-- info del contatto -->
               <div class="info">
                 <h3>{{ contact.name }}</h3>
+                <!-- mostro ultimo accesso -->
                 <p>{{ getTime(contact.messages[contact.messages.length - 1].date) }}</p>
               </div>
             </li>
@@ -92,6 +94,7 @@
       <!-- chat -->
       <div class="chat">
         <div class="container-message">
+        <!-- con v-for mostro ogni messaggio del contatto -->
         <div class="messages"
              v-for="message in contacts[index].messages">
           <div class="message"
@@ -104,7 +107,10 @@
       <!-- sezione input messaggio ed emoji -->
       <div class="input-chat">
         <i class="fas fa-smile"></i>
-        <input type="text" placeholder=" Scrivi un messaggio">
+        <!-- aggiunto keyup per invio messaggio quando si pigia Enter -->
+        <input v-model="message"
+               @keyup.enter="msgSend"
+               placeholder=" Scrivi un messaggio">
         <i class="fas fa-microphone"></i>
       </div>
     </main>
