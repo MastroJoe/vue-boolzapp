@@ -207,14 +207,24 @@ var app = new Vue(
         const last = messages.length - 1;
         return messages[last].date;
       },
-      // // funzione invio messaggio da input chat
-      // msgSend: function(){
-      // let index;
-      // this.contacts.forEach((contact, i) => {
-      //   if (contact.visible == true) {
-      //     index = i;
-      //   }
-      // });
+      // funzione invio messaggio da input chat
+      msgSend: function(){
+        let index;
+        this.contacts.forEach((contact, i) => {
+          if (contact.visible == true) {
+            index = i;
+          }
+        });
+        const time = dayjs().format('HH:mm:ss');
+        const message = {
+          time,
+          // console.log(this.message);
+          text: this.message,
+          status: 'sent'
+        };
+        this.contacts[index].messages.push(message);
+        this.message = '';
+      }
     }
   }
 );
