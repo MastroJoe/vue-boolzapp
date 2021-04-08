@@ -216,16 +216,28 @@ var app = new Vue(
           }
         });
         // dayjs
-        const time = dayjs().format('HH:mm:ss');
+        const date = dayjs().format('HH:mm');
+        console.log(date);
         const message = {
-          time,
           // console.log(this.message);
           text: this.message,
+          date,
           status: 'sent'
         };
         this.contacts[index].messages.push(message);
-        
+
         this.message = '';
+
+        // risposta automatica 'ok' dopo 1 secondo
+        setTimeout(() => {
+          const date = dayjs().format('HH:mm');
+          const message = {
+            text: 'Ok',
+            date,
+            status: 'received'
+          }
+          this.contacts[index].messages.push(message);
+        }, 1000);
       }
     }
   }
