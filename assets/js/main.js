@@ -215,6 +215,7 @@ var app = new Vue(
             index = i;
           }
         });
+        // dayjs
         const time = dayjs().format('HH:mm:ss');
         const message = {
           time,
@@ -223,6 +224,7 @@ var app = new Vue(
           status: 'sent'
         };
         this.contacts[index].messages.push(message);
+        
         this.message = '';
       }
     }
