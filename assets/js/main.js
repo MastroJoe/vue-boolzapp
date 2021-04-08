@@ -215,8 +215,8 @@ var app = new Vue(
             index = i;
           }
         });
-        // dayjs
-        const date = dayjs().format('HH:mm');
+        // funzione dayjs con lo stesso formato dei dati
+        const date = dayjs().format('DD/MM/YYYY HH:mm:ss');
         console.log(date);
         const message = {
           // console.log(this.message);
@@ -230,7 +230,8 @@ var app = new Vue(
 
         // risposta automatica 'ok' dopo 1 secondo
         setTimeout(() => {
-          const date = dayjs().format('HH:mm');
+          // funzione dayjs con lo stesso formato dei dati
+          const date = dayjs().format('DD/MM/YYYY HH:mm:ss');
           const message = {
             text: 'Ok',
             date,
